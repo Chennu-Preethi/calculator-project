@@ -1,0 +1,139 @@
+/* Global reset and font settings */
+* {
+    font-family: 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Dark mode background */
+body.dark {
+    background: #121212;
+}
+
+/* Main container style */
+.container {
+    width: 100%;
+    height: 100vh;
+    background: #e3f9ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+/* Container background for dark mode */
+body.dark .container {
+    background: #1e1e2f;
+}
+
+/* Calculator styling */
+.calculator {
+    background: #3a4452;
+    padding: 20px;
+    border-radius: 15px;
+    width: 360px;
+    overflow: hidden;
+}
+
+/* Calculator dark mode */
+body.dark .calculator {
+    background: #ecf0f3;
+}
+
+/* Common input styles */
+.calculator form input {
+    border: 0;
+    outline: 0;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    background: transparent;
+    font-family: inherit;
+}
+
+/* Button styles */
+.calculator form input[type="button"] {
+    width: 3.5rem;
+    height: 3rem;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),
+        5px 5px 15px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    cursor: pointer;
+    margin: 0.6rem;
+    transition: transform 0.2s ease;
+}
+
+/* Button hover and active animations */
+.calculator form input[type="button"]:hover {
+    transform: scale(1.05);
+}
+
+.calculator form input[type="button"]:active {
+    transform: scale(0.95);
+}
+
+/* Display section styling */
+form .display {
+    margin: 1.5rem 0;
+    width: 100%;
+}
+
+form .display input {
+    width: 100%;
+    font-size: 2.3rem;
+    padding: 0.8rem;
+    height: 4.5rem;
+    background-color: #61e78a;
+    font-family: 'DS-Digital', monospace;
+    letter-spacing: 1.5px;
+    color: #000;
+    border-radius: 10px;
+}
+
+/* Dark mode display styling */
+body.dark form .display input {
+    background-color: #1b2a3b;
+    color: #cfcfcf;
+}
+
+/* Equal (=) button styling */
+form input.equal {
+    background: rgb(204, 64, 64);
+    width: 100%;
+    height: 3rem;
+    font-size: 1.6rem;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100;
+    color: #333;
+}
+
+/* Theme toggle dark mode style */
+body.dark .theme-toggle {
+    color: #f5f5f5;
+}
+
+/* Button styling in dark mode */
+body.dark .calculator form input[type="button"] {
+    color: #2f3542;
+    background: #dfe4ea;
+    box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.5),
+        4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Equal button in dark mode */
+body.dark form input.equal {
+    background: #ff6b81;
+    color: #fff;
+}
