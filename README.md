@@ -81,5 +81,3 @@ _(Replace with your actual Netlify link after deployment)_
 ## 📜 License
 
 This project is open-source and free to use for educational purposes.
-
-
